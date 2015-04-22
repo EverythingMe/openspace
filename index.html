@@ -57,7 +57,11 @@
       <div class="flipper">
         <div class="panel front" style="background-color: {{ color name }}">
           <div class="panel-body">
-            <icon class="mdi-action-find-in-page"></icon>
+            {{#if icon_class}}
+            <icon class="{{ icon_class }}"></icon>
+            {{else}}
+            <img src="{{ icon_url }}" alt="{{ name }}" />
+            {{/if}}
             <title>{{ name }}</title>
           </div>
         </div>
