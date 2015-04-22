@@ -410,7 +410,7 @@ String.prototype.hashCode = function() {
 
 // hashes the key, and consistently picks a color from colors array
 function getMaterialColor(key, hue) {
-    !hue && (hue = '500');
+    !hue && (hue = '700');
 
     color_node = materialColors[Math.abs(key.hashCode()) % materialColors.length];
 
