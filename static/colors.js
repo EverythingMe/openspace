@@ -403,7 +403,7 @@ var materialColors = [
 
 // filter out some offputting colors
 materialColors = _.filter(materialColors, function(obj) {
-  return ['grey', 'brown', 'deep-orange', 'blue-grey', 'red'].indexOf(obj.name) == -1
+  return ['grey', 'brown', 'deep-orange', 'blue-grey'].indexOf(obj.name) == -1
 });
 
 String.prototype.hashCode = function() {
@@ -415,7 +415,7 @@ String.prototype.hashCode = function() {
 
 // hashes the key, and consistently picks a color from colors array
 function getMaterialColor(key, hue) {
-    !hue && (hue = '700');
+    !hue && (hue = '500');
 
     color_node = materialColors[Math.abs(key.hashCode()) % materialColors.length];
 

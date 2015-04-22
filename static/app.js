@@ -44,9 +44,4 @@ $.ajax('data/projects.json').done(function(data) {
         }
       });
   })();
-
-  // hashes the key, and consistently picks a color from colors array
-  function getColor(key) {
-      return
-  }
  });
