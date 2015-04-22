@@ -401,6 +401,11 @@ var materialColors = [
   }
 ];
 
+// filter out some offputting colors
+materialColors = _.filter(materialColors, function(obj) {
+  return ['grey', 'brown', 'deep-orange', 'blue-grey', 'red'].indexOf(obj.name) == -1
+});
+
 String.prototype.hashCode = function() {
   for(var ret = 0, i = 0, len = this.length; i < len; i++) {
     ret = (31 * ret + this.charCodeAt(i)) << 0;
