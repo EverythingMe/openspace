@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Open Source Projects Showcase</title>
+    <link rel="stylesheet" href="static/components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/components/bootstrap-material-design/dist/css/material.min.css">
+    <link rel="stylesheet" href="static/components/bootstrap-material-design/dist/css/ripples.min.css">
+    <link rel="stylesheet" href="static/components/bootstrap-material-design/dist/css/roboto.min.css">
+    <link rel="stylesheet" href="static/style.css">
+
+    <script src="static/components/handlebars/handlebars.min.js"></script>
+    <script src="static/components/underscore/underscore-min.js"></script>
+
+    <script src="static/components/jquery/dist/jquery.min.js"></script>
+    <script src="static/components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="static/components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+    <script src="static/components/bootstrap-material-design/dist/js/material.min.js"></script>
+    <script src="static/components/mixitup/build/jquery.mixitup.min.js"></script>
+    <script src="static/colors.js"></script>
+
+    <script src="data/projects.json"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Open Source Projects Showcase</a>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-secondary">
+      <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav" id="tag-filter">
+            <!-- <li><a href="javascript:void(0)" class="sort" data-sort="random">Randomize!</a></li> -->
+            <li><a href="javascript:void(0)" class="btn btn-flat btn-info filter active" data-filter="all">All</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="projects"></div>
+  </div>
+
+  <script id="project-template" type="text/x-handlebars-template">
+    {{#projects}}
+    <div class="project flip-container mix {{#each tags}}{{ name }} {{/each}}" data-myorder="{{ @index }}">
+      <div class="flipper">
+        <div class="panel front" style="background-color: {{ color name }}">
+          <div class="panel-body">
+            <icon class="mdi-action-find-in-page"></icon>
+            <title>{{ name }}</title>
+          </div>
+        </div>
+        <div class="panel back">
+          <div class="panel-body">
+            <h3>{{ name }}</h3>
+            <p>{{ description }}</p>
+            <a href="{{ url }}" class="btn btn-primary btn-xs">Github page</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/projects}}
+  </script>
+
+  <script id="tag-filter-template" type="text/x-handlebars-template">
+    {{#tags}}
+    <li><a href="javascript:void(0)" class="btn btn-flat btn-success filter" data-filter=".{{ name }}">{{ name }}</a></li>
+    {{/tags}}
+  </script>
+
+  <script>
+    Handlebars.registerHelper('color', function(str) {
+      return getMaterialColor(str);
+    });
+
+    $.ajax('data/projects.json').done(function(data) {
+      // normalize
+      data.forEach(function(project) {
+        project.tags = project.tags.map(function(tag) {
+          return {'name': tag};
+        });
+      });
+
+      // tag filters
+      (function() {
+        var tags = [];
+        data.forEach(function(project) {
+          tags = tags.concat(project.tags)
+        });
+        tags = _.uniq(tags, function(item){
+          return JSON.stringify(item);
+        });
+
+        var source   = $('#tag-filter-template').html();
+        var template = Handlebars.compile(source);
+        var html = template({ 'tags': tags })
+
+        $('#tag-filter').append(html)
+      })();
+
+      // projects
+      (function() {
+        var source   = $('#project-template').html();
+        var template = Handlebars.compile(source);
+        var html = template({ 'projects': data })
+
+        $('#projects')
+          .html(html)
+          .mixItUp({
+            animation: {
+              duration: 400,
+              effects: 'fade translateZ(-360px) stagger(34ms)',
+              easing: 'ease'
+            }
+          });
+      })();
+
+      // hashes the key, and consistently picks a color from colors array
+      function getColor(key) {
+          return
+      }
+     });
+  </script>
+</body>
+
+</html>
