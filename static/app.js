@@ -71,16 +71,15 @@ var App = function(_cfg) {
     var state = projectsEl.mixItUp('getState');
     var currTag = $('button[data-tag="'+state.activeFilter+'"]');
     var newTag = $('button[data-tag="'+name+'"]');
-    var activeClass = "active btn-success";
+    var toggleClassName = "active btn-flat";
 
     if (state.activeFilter == name) {
       projectsEl.mixItUp('filter', 'all');
-      newTag.removeClass(activeClass);
     } else {
       projectsEl.mixItUp('filter', name);
-      currTag.removeClass(activeClass);
-      newTag.addClass(activeClass);
+      currTag.toggleClass(toggleClassName);
     }
+    newTag.toggleClass(toggleClassName);
   };
 
   return {
