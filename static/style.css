@@ -22,6 +22,13 @@ a, a:hover, .navbar .navbar-nav>li>a, .navbar .navbar-nav>li>a:hover {
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     margin-bottom: 20px;
 }
+.navbar-collapse {
+  padding: 0;
+}
+.btn {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 #disqus_thread {
     margin-top: 70px;
 }

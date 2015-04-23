@@ -39,10 +39,7 @@
             </button>
         </div>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav" id="tag-filter">
-            <!-- <li><a href="javascript:void(0)" class="sort" data-sort="random">Randomize!</a></li> -->
-            <li><a href="javascript:void(0)" class="btn btn-flat btn-info filter active" data-filter="all">All</a></li>
-          </ul>
+          <div id="tag-filter"></div>
         </div>
       </div>
     </div>
@@ -79,11 +76,14 @@
 
   <script id="tag-filter-template" type="text/x-handlebars-template">
     {{#tags}}
-    <li><a href="javascript:void(0)" class="btn btn-flat btn-success filter" data-filter=".{{ name }}">{{ name }}</a></li>
+    <button class="btn" data-tag=".{{ name }}" onclick="app.filter('.{{ name }}')">{{ name }}</button>
     {{/tags}}
   </script>
 
   <script src="static/app.js"></script>
+  <script>
+    var app = App();
+  </script>
 </body>
 
 </html>
