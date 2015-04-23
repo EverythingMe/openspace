@@ -65,12 +65,12 @@ h5 {
 #projects .gap{
   display: inline-block;
   width: 49%;
-  height: 270px;
 }
 
 #projects .mix{
   margin-bottom: 2%;
   display: none;
+  height: 270px;
 }
 #projects:after{
   content: '';

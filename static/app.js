@@ -52,7 +52,7 @@ var App = function(_cfg) {
     var html = template({ 'projects': data })
 
     projectsEl
-      .html(html)
+      .prepend(html)
       .mixItUp({
         animation: {
           duration: 400,
