@@ -53,7 +53,7 @@
 
   <script id="project-template" type="text/x-handlebars-template">
     {{#projects}}
-    <div class="project flip-container mix {{#each tags}}{{ name }} {{/each}}" data-myorder="{{ @index }}">
+    <div class="project flip-container mix {{#each tags}}{{ escape name }} {{/each}}" data-myorder="{{ @index }}">
       <div class="flipper">
         <div class="panel front" style="background-color: {{ color name }}">
           <div class="panel-body">
@@ -79,7 +79,7 @@
 
   <script id="tag-filter-template" type="text/x-handlebars-template">
     {{#tags}}
-    <button class="btn" data-tag=".{{ name }}" onclick="app.filter('.{{ name }}')">{{ name }}</button>
+    <button class="btn" data-tag=".{{ escape name }}" onclick="app.filter('.{{ escape name }}')">{{ name }}</button>
     {{/tags}}
   </script>
 

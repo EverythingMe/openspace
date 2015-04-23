@@ -3,6 +3,11 @@ Handlebars.registerHelper('color', function(str) {
   return getMaterialColor(str);
 });
 
+// swaps errornous chars with '-'
+Handlebars.registerHelper('escape', function(str) {
+  return str.replace(/:|;|\\|\//, '-')
+});
+
 var App = function(_cfg) {
   var cfg = {
     dataPath: 'data/projects.json',
