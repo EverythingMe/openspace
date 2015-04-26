@@ -71,8 +71,6 @@ a, a:hover, .navbar .navbar-nav>li>a, .navbar .navbar-nav>li>a:hover {
   overflow: hidden;
   position: relative;
   height: 196px;
-  /*transition: color 0.2s ease;
-  transition: background-color 0.2s ease;*/
 }
 .panel:not(:hover),
 .panel:not(:hover) icon,
@@ -80,7 +78,8 @@ a, a:hover, .navbar .navbar-nav>li>a, .navbar .navbar-nav>li>a:hover {
 .panel:not(:hover) forks {
   color: white !important;
 }
-.panel:hover {
+.panel:hover,
+.panel:not(:hover) panel-heading hr {
   background-color: white !important;
 }
 .panel icon {
@@ -94,23 +93,26 @@ title {
 }
 panel-heading {
   display: block;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding-bottom: 15px;
-  margin-bottom: 20px;
   position: relative;
+}
+panel-heading hr {
+  opacity: 0.2;
+  margin: 15px 0 0;
+  border: 0;
 }
 stats {
   position: absolute;
   right: 0px;
-  bottom: 25px;
+  bottom: 43px;
 }
 .panel stats > * {
   font-size: 14px;
 }
-stats > *:before {
+stats i:before {
   font-size: 18px;
 }
-forks:before {
+forks i:before {
   margin-right: 0 !important;
 }
 panel-body {
@@ -126,19 +128,18 @@ panel-body {
 }
 links {
   position: absolute;
-  bottom: -79px;
+  bottom: -77px;
   right: 0;
   left: 0;
-  height: 79px;
+  height: 77px;
   background: white;
   transition: all 0.15s ease;
-  padding: 15px 15px 0 0;
+  padding: 10px 15px 0 0;
   text-align: right;
   color: #717171;
-
 }
 .panel:hover links{
-  transform: translateY(-79px);
+  transform: translateY(-77px);
 }
 links a {
   color: #717171 !important;
