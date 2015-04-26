@@ -8,7 +8,7 @@
     "links": [{
       "url": "http://yourblog.com/project/Project1",
       "title": "read more",
-      "class": "book"
+      "class": "icon-book"
     }, {
       "url": "https://github.com/user/Project1",
       "title": "github"
@@ -24,6 +24,10 @@
       "Tag1"
     ],
     "links": [{
+      "url": "http://example.com",
+      "title": "site",
+      "class": "mdi-action-home"
+    } ,{
       "url": "https://github.com/user/Project2",
       "title": "github"
     }],
@@ -54,7 +58,7 @@
     "links": [{
       "url": "http://yourblog.com/project/Project4",
       "title": "read more",
-      "class": "book"
+      "class": "icon-book"
     }, {
       "url": "https://github.com/user/Project4",
       "title": "github"
@@ -72,7 +76,7 @@
     "links": [{
       "url": "http://yourblog.com/project/Project5",
       "title": "read more",
-      "class": "book"
+      "class": "icon-book"
     }, {
       "url": "https://github.com/user/Project5",
       "title": "github"
@@ -120,7 +124,7 @@
     "links": [{
       "url": "http://yourblog.com/project/Project8",
       "title": "read more",
-      "class": "book"
+      "class": "icon-book"
     }, {
       "url": "https://github.com/user/Project8",
       "title": "github"
