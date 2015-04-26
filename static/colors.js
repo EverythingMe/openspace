@@ -1,3 +1,5 @@
+(function() {
+
 var materialColors = [
   {
     'name': 'red',
@@ -413,11 +415,22 @@ String.prototype.hashCode = function() {
   return ret;
 };
 
+var hashStorage = {};
+
 // hashes the key, and consistently picks a color from colors array
 function getMaterialColor(key, hue) {
     !hue && (hue = '600');
 
-    color_node = materialColors[Math.abs(key.hashCode()) % materialColors.length];
+    if (key in hashStorage) {
+      color_node = hashStorage[key];
+    } else {
+      color_node = materialColors[Math.abs(key.hashCode()) % materialColors.length];
+      hashStorage[key] = color_node;
+    }
 
     return color_node['hues'][hue];
 }
+
+window.getMaterialColor = getMaterialColor;
+
+})();
