@@ -29,34 +29,8 @@ a, a:hover, .navbar .navbar-nav>li>a, .navbar .navbar-nav>li>a:hover {
   padding-left: 20px;
   padding-right: 20px;
 }
-#disqus_thread {
-    margin-top: 70px;
-}
-.circle {
-    border-radius: 50%;
-}
-h5 {
-  color: #AEAEAE;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  font-size: 12px;
-}
-.btn.circle {
-    padding: 8px;
-}
-.panel {
-    position: relative;
-}
-.btn-action {
-  position: absolute;
-  right: 20px;
-  bottom: -30px;
-}
 
 #projects{
-  padding: 2% 0 0;
   text-align: justify;
   -webkit-backface-visibility: hidden;
 }
@@ -68,18 +42,12 @@ h5 {
 }
 
 #projects .mix{
-  margin-bottom: 2%;
   display: none;
-  height: 270px;
 }
 #projects:after{
   content: '';
   display: inline-block;
   width: 100%;
-}
-#projects .mix:before{
-  content: '';
-  display: inline-block;
 }
 
 
@@ -96,78 +64,84 @@ h5 {
     width: 32%%;
   }
 }
-#projects .front, #projects .front a {
-    color: white;
+
+/* panel */
+.panel {
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  height: 196px;
+  /*transition: color 0.2s ease;
+  transition: background-color 0.2s ease;*/
 }
-#projects title {
-    display: block;
+.panel:not(:hover),
+.panel:not(:hover) icon,
+.panel:not(:hover) stars,
+.panel:not(:hover) forks {
+  color: white !important;
 }
-#projects .front title {
+.panel:hover {
+  background-color: white !important;
+}
+.panel icon {
+  font-size: 35px;
+  color: white;
+  margin-bottom: 10px;
+}
+title {
   display: block;
+  font-size: 27px;
+}
+panel-heading {
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
+stats {
   position: absolute;
-  bottom: 14px;
-  font-size: 20px;
+  right: 0px;
+  bottom: 25px;
 }
-#projects icon {
-    position: absolute;
-    top: 14%;
-    left: 0;
-    color: white;
-    font-size: 110px;
-    display: block;
-    right: 0;
-    text-align: center;
+.panel stats > * {
+  font-size: 14px;
 }
-#projects .project .btn-primary{
-    position: absolute;
-    right: 20px;
-    bottom: 10px;
+stats > *:before {
+  font-size: 18px;
 }
-.flip-container {
-    perspective: 1000;
-    position: relative;
+forks:before {
+  margin-right: 0 !important;
 }
-.flip-container:hover .flipper, .flip-container.hover .flipper {
-    transform: rotateY(180deg);
+panel-body {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  display: -webkit-box;
+  line-height: 16px;
+  height: 34px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-align: left;
 }
-.flipper {
-  transition: 0.3s;
-  transition-delay: 0.5s;
-  transform-style: preserve-3d;
+links {
   position: absolute;
-  top: 0;
+  bottom: -79px;
+  right: 0;
   left: 0;
-  bottom: 0;
-  right: 0
-}
-.front, .back {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0
-}
-.front {
-  z-index: 2;
-  transform: rotateY(0deg);
-}
-.back {
-  transform: rotateY(180deg);
-}
+  height: 79px;
+  background: white;
+  transition: all 0.15s ease;
+  padding: 15px 15px 0 0;
+  text-align: right;
+  color: #717171;
 
-
-
-#project .panel-heading p {
-    font-size: 20px;
 }
-#project .panel-heading p {
-    font-size: 20px;
+.panel:hover links{
+  transform: translateY(-79px);
 }
-#project .panel-heading a {
-    color: white;
-}
-
-.dropdown-menu li{
-    text-transform: capitalize;
+links a {
+  color: #717171 !important;
+  padding-left: 5px !important;
+  padding-right: 12px !important;
 }

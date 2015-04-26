@@ -5,18 +5,28 @@
     "tags": [
       "Tag1"
     ],
-    "url": "https://github.com/user/Project1",
+    "links": [{
+      "url": "http://yourblog.com/project/Project1",
+      "title": "read more",
+      "class": "book"
+    }, {
+      "url": "https://github.com/user/Project1",
+      "title": "github"
+    }],
     "forks_count": 28,
     "stars_count": 239,
     "icon_class": "mdi-file-cloud-done",
-    "description": "A description of Project1"
+    "description": "A description of Project1. This is actually a really really really really long description. If it's more than three rows of text, it should get cut off and an ellipsis will."
   },
   {
     "name": "Project2",
     "tags": [
       "Tag1"
     ],
-    "url": "https://github.com/user/Project2",
+    "links": [{
+      "url": "https://github.com/user/Project2",
+      "title": "github"
+    }],
     "forks_count": 2,
     "stars_count": 19,
     "icon_class": "mdi-hardware-security",
@@ -27,7 +37,10 @@
     "tags": [
       "Tag2"
     ],
-    "url": "https://github.com/user/Project3",
+    "links": [{
+      "url": "https://github.com/user/Project3",
+      "title": "github"
+    }],
     "forks_count": 3,
     "stars_count": 11,
     "icon_class": "mdi-image-camera",
@@ -38,7 +51,14 @@
     "tags": [
       "Tag3"
     ],
-    "url": "https://github.com/user/Project4",
+    "links": [{
+      "url": "http://yourblog.com/project/Project4",
+      "title": "read more",
+      "class": "book"
+    }, {
+      "url": "https://github.com/user/Project4",
+      "title": "github"
+    }],
     "forks_count": 28,
     "stars_count": 239,
     "icon_class": "mdi-maps-location-history",
@@ -49,7 +69,14 @@
     "tags": [
       "Tag1"
     ],
-    "url": "https://github.com/user/Project5",
+    "links": [{
+      "url": "http://yourblog.com/project/Project5",
+      "title": "read more",
+      "class": "book"
+    }, {
+      "url": "https://github.com/user/Project5",
+      "title": "github"
+    }],
     "forks_count": 2,
     "stars_count": 19,
     "icon_class": "mdi-maps-local-cafe",
@@ -60,7 +87,10 @@
     "tags": [
       "Tag2"
     ],
-    "url": "https://github.com/user/Project6",
+    "links": [{
+      "url": "https://github.com/user/Project6",
+      "title": "github"
+    }],
     "forks_count": 3,
     "stars_count": 11,
     "icon_class": "mdi-device-access-alarm",
@@ -73,7 +103,10 @@
       "Tag2",
       "Tag3"
     ],
-    "url": "https://github.com/user/Project7",
+    "links": [{
+      "url": "https://github.com/user/Project7",
+      "title": "github"
+    }],
     "forks_count": 28,
     "stars_count": 239,
     "icon_class": "mdi-device-brightness-high",
@@ -84,7 +117,14 @@
     "tags": [
       "Tag1"
     ],
-    "url": "https://github.com/user/Project8",
+    "links": [{
+      "url": "http://yourblog.com/project/Project8",
+      "title": "read more",
+      "class": "book"
+    }, {
+      "url": "https://github.com/user/Project8",
+      "title": "github"
+    }],
     "forks_count": 2,
     "stars_count": 19,
     "icon_class": "mdi-editor-insert-photo",
@@ -95,7 +135,10 @@
     "tags": [
       "Tag2"
     ],
-    "url": "https://github.com/user/Project9",
+    "links": [{
+      "url": "https://github.com/user/Project9",
+      "title": "github"
+    }],
     "forks_count": 3,
     "stars_count": 11,
     "icon_class": "mdi-maps-local-attraction",
