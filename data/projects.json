@@ -107,7 +107,7 @@
       "url": "https://github.com/user/Project7",
       "title": "github"
     }],
-    "forks_count": 28,
+    "forks_count": 0,
     "stars_count": 239,
     "icon_class": "mdi-device-brightness-high",
     "description": "A description of Project7"
@@ -126,7 +126,7 @@
       "title": "github"
     }],
     "forks_count": 2,
-    "stars_count": 19,
+    "stars_count": 0,
     "icon_class": "mdi-editor-insert-photo",
     "description": "A description of Project8"
   },
@@ -139,8 +139,8 @@
       "url": "https://github.com/user/Project9",
       "title": "github"
     }],
-    "forks_count": 3,
-    "stars_count": 11,
+    "forks_count": 0,
+    "stars_count": 0,
     "icon_class": "mdi-maps-local-attraction",
     "description": "A description of Project9"
   }

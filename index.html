@@ -52,8 +52,12 @@
             {{/if}}
             <title>{{ name }}</title>
             <stats>
+              {{#if stars_count}}
               <stars style="color: {{ color name }}"><i class="mdi-action-grade"></i>{{ stars_count }}</stars>
+              {{/if}}
+              {{#if forks_count}}
               <forks style="color: {{ color name }}"><i class="icon-flow-branch"></i>{{ forks_count }}</forks>
+              {{/if}}
             </stats>
             <hr style="background-color: {{ color name }}" />
           </panel-heading>
