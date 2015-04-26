@@ -11,16 +11,21 @@
     background-color: #AFB42B;
 }
 a, a:hover, .navbar .navbar-nav>li>a, .navbar .navbar-nav>li>a:hover {
-    color: #00BCD4;
+  color: #00BCD4;
 }
 .navbar {
-    margin-bottom: 0;
+  margin-bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 .navbar.navbar-secondary {
     background: #ffffff;
     color: #009688;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     margin-bottom: 20px;
+    top: 60px;
 }
 .navbar-collapse {
   padding: 0;
@@ -29,7 +34,9 @@ a, a:hover, .navbar .navbar-nav>li>a, .navbar .navbar-nav>li>a:hover {
   padding-left: 20px;
   padding-right: 20px;
 }
-
+body > .container {
+  padding-top: 140px;
+}
 #projects{
   text-align: justify;
   -webkit-backface-visibility: hidden;
