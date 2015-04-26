@@ -41,44 +41,61 @@
 
   <script id="project-template" type="text/x-handlebars-template">
     {{#projects}}
-    <div class="project flip-container mix {{#each tags}}{{ escape name }} {{/each}}" data-myorder="{{ @index }}">
-        <div class="panel" style="background-color: {{ color name }}; color: {{ color name }}">
-          <panel-heading>
-            {{#if icon_class}}
-            <icon class="{{ icon_class }}" style="color: {{ color name }}"></icon>
+    <div class="project flip-container mix {{#each tags}}{{ escape name }} {{/each}}" data-myorder="{{ @index }}" id="project-{{ escape name }}">
+      <style>
+        #project-{{ escape name }} .panel,
+        #project-{{ escape name }} icon,
+        #project-{{ escape name }} stars,
+        #project-{{ escape name }} forks {
+          color: {{ color name }}
+        }
+        #project-{{ escape name }} .panel,
+        #project-{{ escape name }} hr,
+        #project-{{ escape name }} tags span {
+          background-color: {{ color name }};
+        }
+      </style>
+      <div class="panel">
+        <panel-heading>
+          {{#if icon_class}}
+          <icon class="{{ icon_class }}"></icon>
+          {{/if}}
+          {{#if icon_url}}
+          <img src="{{ icon_url }}" alt="{{ name }}" />
+          {{/if}}
+          <title>{{ name }}</title>
+          <stats>
+            {{#if stars_count}}
+            <stars><i class="mdi-action-grade"></i>{{ stars_count }}</stars>
             {{/if}}
-            {{#if icon_url}}
-            <img src="{{ icon_url }}" alt="{{ name }}" />
+            {{#if forks_count}}
+            <forks><i class="icon-flow-branch"></i>{{ forks_count }}</forks>
             {{/if}}
-            <title>{{ name }}</title>
-            <stats>
-              {{#if stars_count}}
-              <stars style="color: {{ color name }}"><i class="mdi-action-grade"></i>{{ stars_count }}</stars>
+          </stats>
+          <tags>
+            {{#tags}}
+              <span>{{ name }}</span>
+            {{/tags}}
+          </tags>
+          <hr />
+        </panel-heading>
+        <panel-body>
+          {{ description }}
+          {{#if links}}
+          <links>
+            {{#links}}
+            <a href="{{ url }}" target="_blank" class="btn btn-flat">
+              {{#if class}}
+              <i class="{{ class }}">
+              {{else}}
+              <i class="icon-{{ title }}">
               {{/if}}
-              {{#if forks_count}}
-              <forks style="color: {{ color name }}"><i class="icon-flow-branch"></i>{{ forks_count }}</forks>
-              {{/if}}
-            </stats>
-            <hr style="background-color: {{ color name }}" />
-          </panel-heading>
-          <panel-body>
-            {{ description }}
-            {{#if links}}
-            <links>
-              {{#links}}
-              <a href="{{ url }}" target="_blank" class="btn btn-flat">
-                {{#if class}}
-                <i class="{{ class }}">
-                {{else}}
-                <i class="icon-{{ title }}">
-                {{/if}}
-                </i>{{ title }}
-              </a>
-              {{/links}}
-            </links>
-            {{/if}}
-          </panel-body>
-        </div>
+              </i>{{ title }}
+            </a>
+            {{/links}}
+          </links>
+          {{/if}}
+        </panel-body>
       </div>
     </div>
     {{/projects}}
