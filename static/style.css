@@ -64,7 +64,6 @@ body > .container {
   width: 100%;
 }
 
-
 @media all and (min-width: 420px){
   #projects .mix,
   #projects .gap{
@@ -192,8 +191,10 @@ panel-heading title,
 }
 .panel:hover links{
   transform: translateY(-77px);
+  -webkit-transform: translateY(-77px);
 }
 .panel:hover panel-heading title,
 .panel:hover panel-heading tags {
   transform: translateY(-45px);
+  -webkit-transform: translateY(-45px);
 }
