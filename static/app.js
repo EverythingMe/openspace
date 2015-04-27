@@ -1,13 +1,3 @@
-
-Handlebars.registerHelper('color', function(str) {
-  return getMaterialColor(str);
-});
-
-// swaps errornous chars with '-'
-Handlebars.registerHelper('escape', function(str) {
-  return str.replace(/:|;|\\|\//, '-')
-});
-
 var App = function(_cfg) {
   var cfg = {
     dataPath: 'data/projects.json',
@@ -88,3 +78,19 @@ var App = function(_cfg) {
     filter: filter
   };
 };
+
+Handlebars.registerHelper('color', function(str) {
+  return getMaterialColor(str);
+});
+
+Handlebars.registerHelper('rgb', function(str) {
+  var color = getMaterialColor(str);
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(color);
+  color = parseInt(result[1], 16)+','+parseInt(result[2], 16)+','+parseInt(result[3], 16);
+  return color;
+});
+
+// swaps errornous chars with '-'
+Handlebars.registerHelper('escape', function(str) {
+  return str.replace(/:|;|\\|\//, '-')
+});

@@ -41,18 +41,21 @@
 
   <script id="project-template" type="text/x-handlebars-template">
     {{#projects}}
-    <div class="project flip-container mix {{#each tags}}{{ escape name }} {{/each}}" data-myorder="{{ @index }}" id="project-{{ escape name }}">
+    <div class="project mix {{#each tags}}{{ escape name }} {{/each}}" data-myorder="{{ @index }}" id="project-{{ escape name }}">
       <style>
-        #project-{{ escape name }} .panel,
-        #project-{{ escape name }} icon,
-        #project-{{ escape name }} stars,
-        #project-{{ escape name }} forks {
+        #project-{{ name }} .panel,
+        #project-{{ name }} icon,
+        #project-{{ name }} stars,
+        #project-{{ name }} forks {
           color: {{ color name }}
         }
-        #project-{{ escape name }} .panel,
-        #project-{{ escape name }} hr,
-        #project-{{ escape name }} tags span {
+        #project-{{ name }} .panel,
+        #project-{{ name }} hr,
+        #project-{{ name }} tags span {
           background-color: {{ color name }};
+        }
+        #project-{{ name }} links a:hover {
+          background-color: rgba({{ rgb name }}, 0.2);
         }
       </style>
       <div class="panel">
