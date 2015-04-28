@@ -60,12 +60,7 @@
       </style>
       <div class="panel">
         <panel-heading>
-          {{#if icon_class}}
-          <icon class="{{ icon_class }}"></icon>
-          {{/if}}
-          {{#if icon_url}}
-          <img src="{{ icon_url }}" alt="{{ name }}" />
-          {{/if}}
+          <icon class="icon {{ icon_class }}" style="background-image: url({{ icon_url }})"></icon>
           <title>{{ name }}</title>
           <stats>
             {{#if stars_count}}

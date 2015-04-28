@@ -3,7 +3,8 @@
   {
     "name": "Project1",
     "tags": [
-      "Tag1"
+      "Tag1",
+      "Tag2"
     ],
     "links": [{
       "url": "http://yourblog.com/project/Project1",
@@ -97,7 +98,6 @@
     }],
     "forks_count": 3,
     "stars_count": 11,
-    "icon_class": "mdi-device-access-alarm",
     "description": "A description of Project6"
   },
   {
@@ -113,7 +113,7 @@
     }],
     "forks_count": 0,
     "stars_count": 239,
-    "icon_class": "mdi-device-brightness-high",
+    "icon_url": "static/heart_icon.png",
     "description": "A description of Project7"
   },
   {
