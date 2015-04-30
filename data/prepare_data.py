@@ -41,7 +41,7 @@ def get_repos_from_github(user):
 
     logging.info('Fetching repo info for %s repos', public_repos_count)
     # TODO: should be replaced with a range that fits the # of repos
-    for page in range(1, public_repos_count / 30 + 2):
+    for page in range(1, public_repos_count / PAGE_SIZE + 2):
         logging.info('Fetching repos page #%s', page)
         req = requests.get(repo_url % (PAGE_SIZE, page))
         repos_data = req.json()
