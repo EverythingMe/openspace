@@ -119,7 +119,9 @@
   {
     "name": "Project8",
     "tags": [
-      "Tag1"
+      "Tag1",
+      "Tag4",
+      "Tag5"
     ],
     "links": [{
       "url": "http://yourblog.com/project/Project8",
@@ -137,7 +139,8 @@
   {
     "name": "Project9",
     "tags": [
-      "Tag2"
+      "Tag2",
+      "Tag4"
     ],
     "links": [{
       "url": "https://github.com/user/Project9",

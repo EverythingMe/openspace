@@ -2,36 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Open Source Projects Showcase</title>
+    <title>OpenSpace | showcase your open source work</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="An open source app to showcase your open source work (yo dawg)." />
+    <meta name="keywords" content="open source, showcase, gallery, oss, github, EvertythingMe" />
+
     <link rel="stylesheet" href="static/components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/components/bootstrap-material-design/dist/css/material.min.css">
+    <link rel="stylesheet" href="static/components/bootstrap-material-design/dist/css/material-fullpalette.min.css">
     <link rel="stylesheet" href="static/components/bootstrap-material-design/dist/css/ripples.min.css">
     <link rel="stylesheet" href="static/components/bootstrap-material-design/dist/css/roboto.min.css">
     <link rel="stylesheet" href="static/style.css">
   </head>
   <body>
-    <div class="navbar">
+    <header class="navbar navbar-material-cyan-800">
       <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/">Open Source Projects Showcase</a>
+        <h1 class="col-md-2"><img src="static/logo.png" alt="OpenSpace" /></h1>
+        <div class="col-md-10">
+          <h2>Open Source Projects</h2>
+          <p>Showcase your open source GitHub projects. <a href="https://github.com/EverythingMe/openspace">Get it here</a>.</p>
         </div>
       </div>
-    </div>
-    <div class="navbar navbar-secondary">
+    </header>
+
+    <div class="navbar navbar-material-cyan-800" data-spy="affix" data-offset-top="207">
       <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
         </div>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <div id="tag-filter"></div>
+          <ul class="nav navbar-nav" id="tag-filter"></ul>
         </div>
       </div>
     </div>
   </div>
+
   <div class="container">
     <div id="projects">
       <div class="gap"></div>
@@ -61,15 +70,17 @@
       <div class="panel">
         <panel-heading>
           <icon class="icon {{ icon_class }}" style="background-image: url({{ icon_url }})"></icon>
-          <title>{{ name }}</title>
-          <stats>
-            {{#if stars_count}}
-            <stars><i class="mdi-action-grade"></i>{{ stars_count }}</stars>
-            {{/if}}
-            {{#if forks_count}}
-            <forks><i class="icon-flow-branch"></i>{{ forks_count }}</forks>
-            {{/if}}
-          </stats>
+          <div>
+            <title>{{ name }}</title>
+            <stats>
+              {{#if stars_count}}
+              <stars><i class="mdi-action-grade"></i>{{ stars_count }}</stars>
+              {{/if}}
+              {{#if forks_count}}
+              <forks><i class="icon-flow-branch"></i>{{ forks_count }}</forks>
+              {{/if}}
+            </stats>
+          </div>
           <tags>
             {{#tags}}
               <span>{{ name }}</span>
@@ -101,7 +112,9 @@
 
   <script id="tag-filter-template" type="text/x-handlebars-template">
     {{#tags}}
-    <button class="btn btn-success btn-flat" data-tag=".{{ escape name }}" onclick="app.filter('.{{ escape name }}')">{{ name }}</button>
+    <li>
+      <a href="javascript:void(0)" data-tag=".{{ escape name }}" onclick="app.filter('.{{ escape name }}')">{{ name }}</a>
+    </li>
     {{/tags}}
   </script>
 
