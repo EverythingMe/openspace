@@ -12,6 +12,7 @@ body, h2 {
   .navbar + .navbar .navbar-collapse {
     padding: 0;
     margin: 0 -15px;
+    height: auto !important;
   }
 }
 .navbar.affix {
@@ -46,7 +47,7 @@ header p {
   font-size: 30px;
   line-height: 41px;
   width: 70%;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 @media all and (max-width: 990px){
   header p {
@@ -62,18 +63,22 @@ header p a:hover {
   color: white;
   text-decoration: none;
 }
-#tag-filter {
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+@media all and (min-width: 768px){
+  header p {
+    margin-bottom: 50px;
+  }
+  #tag-filter {
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  }
 }
 #tag-filter a {
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 500;
   outline: none;
+  display: inline-block;
 }
 #tag-filter a:not(.active):not(:hover) {
   opacity: 0.5;

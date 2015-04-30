@@ -15,17 +15,20 @@ var App = function(_cfg) {
       normalizeData(d);
       initTags(d);
       initProjects(d);
+      initAffix();
     });
 
-  var normalizeData = function(data) {
+  window.onresize = initAffix;
+
+  function normalizeData(data) {
     data.forEach(function(p) {
       p.tags = p.tags.map(function(tag) {
         return {'name': tag};
       });
     });
-  };
+  }
 
-  var initTags = function(data) {
+  function initTags(data) {
     var tags = [];
     data.forEach(function(p) {
       tags = tags.concat(p.tags)
@@ -39,9 +42,9 @@ var App = function(_cfg) {
     var html = template({ 'tags': tags })
 
     $('#tag-filter').append(html)
-  };
+  }
 
-  var initProjects = function(data) {
+  function initProjects(data) {
     var source   = $('#project-template').html();
     var template = Handlebars.compile(source);
     var html = template({ 'projects': data })
@@ -55,7 +58,18 @@ var App = function(_cfg) {
           easing: 'ease'
         }
       });
-  };
+  }
+
+  function initAffix() {
+    console.log(1);
+    $('#affix').affix({
+      offset: {
+        top: function () {
+          return (this.top = $('header').outerHeight(true))
+        }
+      }
+    })
+  }
 
   var filter = function(name) {
     if (projectsEl.mixItUp('isMixing')) return;
