@@ -178,7 +178,7 @@ title {
 }
 stats {
   text-align: right;
-  flex-basis: 70px;
+  min-width: 70px;
 }
 .panel stats > * {
   font-size: 14px;
