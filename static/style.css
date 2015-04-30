@@ -28,6 +28,8 @@ body, h2 {
 }
 @media all and (min-width: 992px) {
   header .container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
   }
   h1 {
@@ -49,6 +51,7 @@ h2 {
 }
 header .container > div {
   flex-grow: 1;
+  -webkit-flex-grow: 1;
 }
 header p {
   font-size: 30px;
@@ -75,9 +78,9 @@ header p a:hover {
     margin-bottom: 50px;
   }
   #tag-filter {
-    display: -ms-flexbox;      /* TWEENER - IE 10 */
-    display: -webkit-flex;     /* NEW - Chrome */
-    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
   }
 }
 #tag-filter a {
@@ -125,6 +128,7 @@ header p a:hover {
 #projects .gap{
   display: inline-block;
   width: 100%;
+  vertical-align: bottom; /* layout fix for safari */
 }
 
 #projects .mix{
@@ -178,12 +182,15 @@ panel-heading hr {
   border: 0;
 }
 panel-heading > div {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
 }
 title {
   display: block;
   font-size: 27px;
   flex-grow: 1;
+  -webkit-flex-grow: 1;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
