@@ -27,26 +27,33 @@ body, h2 {
   padding-top: 96px;
 }
 @media all and (min-width: 992px) {
+  header .container {
+    display: flex;
+  }
   h1 {
     padding: 0 !important;
+    margin-right: 15px;
   }
-}
-@media all and (min-width: 992px) {
-  h1 img {
-    width: 100%;
+  h2 {
+    margin-top: 38px;
   }
 }
 h2 {
   border-bottom: 1px solid rgba(255,255,255,0.3);
   font-size: 25px;
   line-height: 60px;
-  font-weight: 100;
+  font-weight: bold;
+  font-family: 'Roboto Condensed';
+  text-transform: uppercase;
   padding-bottom: 2px;
+}
+header .container > div {
+  flex-grow: 1;
 }
 header p {
   font-size: 30px;
   line-height: 41px;
-  width: 70%;
+  width: 63%;
   margin-bottom: 20px;
 }
 @media all and (max-width: 990px){
