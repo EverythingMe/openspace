@@ -4,6 +4,8 @@ Openspace is a web app to showcase your open source projects on GitHub.
 
 We’ve reached a point where EverythingMe's organization profile on GitHub holds a combination of internal tools, forks of projects we’re using and contributed to and some less interesting bits. We wanted a simple and beatiful way to showcase the projects that are represent our open sourced work.
 
+Shut up and [show me how it looks](http://everythingme.github.io/openspace/)
+
 ## Overview
 
 The web app is purely static to allow it to be hosted on GitHub pages, it uses a *projects.json* under */data* folder to determine which projects to display.
