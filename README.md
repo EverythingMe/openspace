@@ -15,12 +15,15 @@ While iterating on the design and metadata we're displaying, we created a [tool]
 ## Getting Started
 
 * Clone and push to *username.github.io* repo.
-* Use the data tool to create your *projects.json* file.
-* Profit.
+* Use the [data tool](https://github.com/EverythingMe/openspace/tree/master/data) to create your *projects.json* file.
+* Modify the projects.json if needed and test locally (simplest way to run it is to run ```python -m SimpleHTTPServer``` in the root folder and browse to [http://localhost:8000]() 
+* Push. Profit.
 
 ## Acknowledgements
 
-* The animations were implemented using [MixItUp](https://mixitup.kunkalabs.com/)
+* Bootsrap and [Material Design for Bootstrap](http://fezvrasta.github.io/bootstrap-material-design/) were used for layout, elements, icons and colors.
+* The projects grid and animations were implemented using [MixItUp](https://mixitup.kunkalabs.com/).
+* [fontello](http://fontello.com/) was used for some of the icons
 
 ## License
 
