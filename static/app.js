@@ -20,6 +20,11 @@ var App = function(_cfg) {
 
   window.onresize = initAffix;
 
+  // mark ios
+  if (/(iPad|iPhone|iPod)/g.test(navigator.userAgent)) {
+    document.body.dataset.os = 'ios';
+  }
+
   function normalizeData(data) {
     data.forEach(function(p) {
       p.tags = p.tags.map(function(tag) {

@@ -264,12 +264,14 @@ tags span {
   font-weight: 400;
 }
 
+body[data-os="ios"] .panel {
+  cursor: pointer; /* turn hovers into clicks in ios */
+}
 links,
 panel-heading title,
 .panel tags {
   transition: all 0.15s ease;
 }
-
 .panel:not(:hover),
 .panel:not(:hover) icon,
 .panel:not(:hover) stars,
