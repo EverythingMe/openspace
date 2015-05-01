@@ -16,7 +16,7 @@ While iterating on the design and metadata we're displaying, we created a [tool]
 
 * Clone and push to *username.github.io* repo.
 * Use the [data tool](https://github.com/EverythingMe/openspace/tree/master/data) to create your *projects.json* file.
-* Modify the projects.json if needed and test locally (simplest way to run it is to run ```python -m SimpleHTTPServer``` in the root folder and browse to [http://localhost:8000]() 
+* Modify the projects.json if needed and test locally (simplest way to run it is to run ```python -m SimpleHTTPServer``` in the root folder and browse to [http://localhost:8000](http://localhost:8000) 
 * Push. Profit.
 
 ## Acknowledgements
