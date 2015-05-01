@@ -81,6 +81,9 @@ header p a:hover {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
   }
 }
 #tag-filter a {
