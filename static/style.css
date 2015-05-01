@@ -233,14 +233,23 @@ links {
   left: 0;
   height: 77px;
   background: white;
-  padding: 17px 15px 0 0;
+  padding: 0px 15px;
   text-align: right;
   color: #717171;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-end;
 }
 links a {
   color: #717171 !important;
-  padding-left: 7px !important;
-  padding-right: 12px !important;
+  padding-left: 4px !important;
+  padding-right: 9px !important;
+  margin: 0 !important;
 }
 links i[class^="mdi-"] {
   font-size: 16px;
