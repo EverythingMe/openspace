@@ -111,5 +111,7 @@ Handlebars.registerHelper('rgb', function(str) {
 
 // swaps errornous chars with '-'
 Handlebars.registerHelper('escape', function(str) {
-  return str.replace(/:|;|\\|\//, '-')
+  if (str)
+    return str.replace(/:|;|\\|\//, '-');
+  return str;
 });
