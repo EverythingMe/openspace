@@ -66,7 +66,7 @@
         }
         #project-{{ name }} .panel,
         #project-{{ name }} hr,
-        #project-{{ name }} tags span {
+        #project-{{ name }} tags button {
           background-color: {{ color name }};
         }
         #project-{{ name }} links a:hover {
@@ -89,7 +89,7 @@
           </div>
           <tags>
             {{#tags}}
-              <span>{{ name }}</span>
+              <button onclick="app.filter('.{{ escape name }}', true)">{{ name }}</button>
             {{/tags}}
           </tags>
           <hr />

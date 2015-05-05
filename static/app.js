@@ -76,7 +76,7 @@ var App = function(_cfg) {
     })
   }
 
-  var filter = function(name) {
+  var filter = function(name, forceFilter) {
     if (projectsEl.mixItUp('isMixing')) return;
 
     var state = projectsEl.mixItUp('getState');
@@ -85,6 +85,7 @@ var App = function(_cfg) {
     var toggleClassName = "active";
 
     if (state.activeFilter == name) {
+      if (forceFilter) { return; }
       projectsEl.mixItUp('filter', 'all');
     } else {
       projectsEl.mixItUp('filter', name);

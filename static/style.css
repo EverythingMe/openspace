@@ -265,7 +265,7 @@ tags {
   color: white;
   text-align: left;
 }
-tags span {
+tags button {
   display: inline-block;
   padding: 1px 4px;
   border-radius: 3px;
@@ -274,6 +274,8 @@ tags span {
   margin-bottom: 3px;
   font-size: 12px;
   font-weight: 400;
+  border: 0;
+  cursor: pointer;
 }
 
 body[data-os="ios"] .panel {
