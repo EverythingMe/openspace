@@ -50,7 +50,8 @@ h2 {
   padding-bottom: 2px;
 }
 header .container > div {
-  flex-grow: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   -webkit-flex-grow: 1;
 }
 header p {
@@ -192,7 +193,8 @@ panel-heading > div {
 title {
   display: block;
   font-size: 27px;
-  flex-grow: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   -webkit-flex-grow: 1;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -242,8 +244,12 @@ links {
   flex-flow: row wrap;
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 links a {
   color: #717171 !important;
