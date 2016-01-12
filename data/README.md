@@ -12,7 +12,7 @@ It's capable of merging existing data, and will only override the following fiel
 python prepare_data.py --user USER --verbose
 ```
 
-You can add *--dry-run* flag to see the output wihtout writing the actual file
+You can add *--dry-run* flag to see the output without writing the actual file
 
 #### Merging
 
@@ -24,7 +24,7 @@ python prepare_data.py --user USER --merge-existing --existing-file projects.jso
 
 #### Filtering projects
 
-If you'd like to filter some of your repos, you can do so by either providing a config yaml file (via click-config) or simply pass multiple *-f REPO_NAME*
+If you'd like to filter some of your repos, you can do so by either providing a YAML config file (via click-config) or simply pass multiple *-f REPO_NAME*
 
 ```
 python prepare_data.py --user USER --merge-existing --existing-file projects.json -f project1 -f project2 --verbose
