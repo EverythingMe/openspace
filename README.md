@@ -21,7 +21,7 @@ While iterating on the design and metadata we're displaying, we created a [tool]
 
 ## Acknowledgements
 
-* Bootstrap and [Material Design for Bootstrap](http://fezvrasta.github.io/bootstrap-material-design/) were used for layout, elements, icons and colors.
+* Bootstrap and [Material Design for Bootstrap](https://mdbootstrap.com/) were used for layout, elements, icons and colors.
 * The projects grid and animations were implemented using [MixItUp](https://mixitup.kunkalabs.com/).
 * [fontello](http://fontello.com/) was used for some of the icons
 
